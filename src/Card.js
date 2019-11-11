@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card(title, content) {
+function Card({title, content}) {
     return (
         <div className="Card">
             <button type="button">Delete</button>
@@ -10,6 +10,4 @@ function Card(title, content) {
     )
 }
 
-export default {
-    Card
-}
+export default Card

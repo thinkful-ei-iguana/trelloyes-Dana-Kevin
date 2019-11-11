@@ -2,18 +2,13 @@ import React from 'react';
 import List from './List';
 
 function Lists (props) {
-  return 
-    props.lists.map(list =>{
-      
+  let lists = props.lists.map((list, index) =>  
     <List
+      key={index}
       header={list.header}
-      cards={list.cardIds.map(cardId => cards[cardId])}
-    />
-
-                    })
-    
-  
-
+      cards={list.cardIds.map(cardId => props.cards[cardId])}
+    />)
+    return <div>{lists}</div>
 }
 
 export default Lists;
