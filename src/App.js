@@ -8,9 +8,10 @@ function App(props) {
         <h1>Trelloyes!</h1>
       </header>
       <div className='App-list'>
-        {props.lists.map( list => {
-          <List listProps={list}/>
-        })}
+        <Lists
+          lists= {props.store.lists}
+          cards={props.store.allCards}
+        />
       </div>
     </main>
   );
